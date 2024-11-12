@@ -1,0 +1,480 @@
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      @font-face {
+        font-family: "Affigere";
+        src: url("https://xcicero.esad-gv.net/page/affigere/Affigere-Regular.otf")
+          format("opentype");
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      .title-font {
+        font-family: "Affigere", sans-serif;
+      }
+      .hover-grow:hover,
+      .active {
+        height: 150px;
+      }
+      .hover-invert:hover {
+        background-color: white;
+      }
+      .hover-invert:hover .text-sm,
+      .hover-invert:hover .text-lg {
+        color: inherit;
+      }
+      .hover-invert:hover .text-sm {
+        color: var(--hover-color);
+      }
+      .hover-invert:hover .text-lg {
+        color: var(--hover-color);
+      }
+      .timeline {
+        position: relative;
+        margin: 0 auto;
+        padding: 2rem 0;
+        width: 2px;
+        background: #2563eb;
+      }
+      .timeline-item {
+        position: relative;
+        margin: 2rem 0;
+        padding-left: 2rem;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -1rem;
+        top: 0;
+        width: 1rem;
+        height: 1rem;
+        background: #2563eb;
+        border-radius: 50%;
+      }
+    </style>
+        <script>
+            function toggleSection(sectionId) {
+              // Oculta ambas secciones
+              document.getElementById("fullstack").classList.add("hidden");
+              document.getElementById("uxdesign").classList.add("hidden");
+      
+              // Muestra la sección seleccionada
+              document.getElementById(sectionId).classList.remove("hidden");
+            }
+          </script>
+  </head>
+  <body class="bg-gray-200">
+    <div class="flex h-screen">
+      <!-- Sidebar -->
+      <div class="flex flex-col w-1/6 bg-gray-100 p-4">
+        <div class="flex items-center justify-center mb-4">
+          <div class="text-4xl font-bold title-font">AR</div>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <a
+            href="#section-1"
+            class="flex flex-col items-center justify-center bg-orange-500 text-white p-4 rounded-lg hover-grow hover-invert transition-all duration-300"
+            style="--hover-color: #f97316"
+          >
+            <div class="text-sm">01</div>
+            <div class="text-lg">Hello</div>
+          </a>
+          <a
+            href="#section-2"
+            class="flex flex-col items-center justify-center bg-purple-600 text-white p-4 rounded-lg hover-grow hover-invert transition-all duration-300"
+            style="--hover-color: #7e22ce"
+          >
+            <div class="text-sm">02</div>
+            <div class="text-lg">Skills</div>
+          </a>
+          <a
+            href="#section-3"
+            class="flex flex-col items-center justify-center bg-black text-white p-4 rounded-lg hover-grow hover-invert transition-all duration-300"
+            style="--hover-color: #000000"
+          >
+            <div class="text-sm">03</div>
+            <div class="text-lg">Work</div>
+          </a>
+          <a
+            href="#section-4"
+            class="flex flex-col items-center justify-center bg-blue-600 text-white p-4 rounded-lg hover-grow hover-invert transition-all duration-300"
+            style="--hover-color: #2563eb"
+          >
+            <div class="text-sm">04</div>
+            <div class="text-lg">Work Experience</div>
+          </a>
+        </div>
+      </div>
+      <!-- Main Content -->
+      <div class="flex flex-col w-5/6 overflow-y-scroll" id="main-content">
+        <div
+          class="flex justify-between items-center bg-orange-500 text-white p-4"
+        >
+          <div>You are now entering ( Hello ) section</div>
+          <div>● 01 / 01</div>
+        </div>
+        <div class="flex-grow">
+          <div
+            id="section-1"
+            class="h-screen bg-orange-500 flex flex-col items-center justify-center"
+            data-section="1"
+          >
+            <div class="text-center">
+              <div class="text-9xl text-gray-200 title-font">01</div>
+              <div class="text-9xl text-gray-200 title-font">Hello</div>
+            </div>
+          </div>
+          <div
+            class="h-screen bg-white flex flex-col items-center justify-center"
+            data-section="1"
+          >
+            <div class="text-center">
+              <div class="text-9xl text-orange-500 title-font">Hello</div>
+              <div class="mt-8 text-center text-orange-500">
+                <p class="text-2xl">I am Agustín Rodrigues</p>
+                <p class="text-xl mt-4">
+                  UX/UI Designer & Full-Stack Developer
+                </p>
+                <p class="text-lg mt-4 max-w-2xl">
+                  I am a passionate UX/UI Designer and Full-Stack Developer with
+                  a knack for creating intuitive and visually appealing user
+                  experiences. With a strong background in both design and
+                  development, I bridge the gap between aesthetics and
+                  functionality to deliver seamless digital solutions.
+                </p>
+                <p class="text-lg mt-4 max-w-2xl">
+                  My expertise spans across various technologies and design
+                  principles, allowing me to craft responsive and user-centric
+                  applications. I thrive in collaborative environments and am
+                  always eager to take on new challenges that push the
+                  boundaries of creativity and innovation.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            id="section-2"
+            class="h-screen bg-purple-600 flex flex-col items-center justify-center"
+            data-section="2"
+          >
+            <div class="text-center">
+              <div class="text-9xl text-gray-200 title-font">02</div>
+              <div class="text-9xl text-gray-200 title-font">Skills</div>
+            </div>
+            <div
+              class="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-white"
+            >
+              <div class="flex flex-col items-center">
+                <i class="fab fa-html5 text-6xl"></i>
+                <p class="mt-2">HTML & CSS</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fab fa-js text-6xl"></i>
+                <p class="mt-2">JavaScript</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fab fa-react text-6xl"></i>
+                <p class="mt-2">ReactJS</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fab fa-css3-alt text-6xl"></i>
+                <p class="mt-2">TailwindCSS</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-database text-6xl"></i>
+                <p class="mt-2">MongoDB</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fab fa-aws text-6xl"></i>
+                <p class="mt-2">AWS</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-server text-6xl"></i>
+                <p class="mt-2">Express</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fab fa-figma text-6xl"></i>
+                <p class="mt-2">Figma</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fab fa-adobe text-6xl"></i>
+                <p class="mt-2">Photoshop</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fab fa-adobe text-6xl"></i>
+                <p class="mt-2">Illustrator</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fas fa-database text-6xl"></i>
+                <p class="mt-2">MySQL</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fab fa-git-alt text-6xl"></i>
+                <p class="mt-2">Git</p>
+              </div>
+            </div>
+          </div>
+          <div
+            id="section-3"
+            class="min-h-screen bg-black flex flex-col items-center justify-center"
+            data-section="3"
+          >
+            <div class="text-center">
+              <div class="text-9xl text-gray-200 title-font">03</div>
+              <div class="text-9xl text-gray-200 title-font">Work</div>
+            </div>
+            <div class="mt-8 text-center text-gray-200">
+              <button
+                onclick="toggleSection('fullstack')"
+                class="bg-gray-200 text-black px-4 py-2 rounded-lg m-2"
+              >
+                Full-Stack Development
+              </button>
+              <button
+                onclick="toggleSection('uxdesign')"
+                class="bg-gray-200 text-black px-4 py-2 rounded-lg m-2"
+              >
+                UX Design
+              </button>
+            </div>
+            <div
+              id="fullstack"
+              class="hidden mt-8 text-center text-gray-200 w-full"
+            >
+              <div class="text-4xl title-font">Full-Stack Development</div>
+              <div
+                class="mt-4 text-sm grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+              >
+                <div
+                  class="bg-white text-black p-4 rounded-lg shadow-lg max-w-sm mx-auto"
+                >
+                  <h3 class="text-xl font-bold">Project 1</h3>
+                  <p class="mt-2">
+                    Backend de Generador de Itinerarios para viajes con IA
+                  </p>
+                  <p class="mt-2">
+                    Descripción: Este proyecto consistía en crear un sistema que
+                    generara itinerarios de viaje automáticamente basándose en
+                    las preferencias del usuario, utilizando Javascript. Se uso
+                    la API de gemini AI para que genere un itinerario y con
+                    fechas, localizaciones y duracion. Eso se guardo en un JSON
+                    para que se pueda usar con SQLite y agregar a la base de
+                    datos cada viaje. Asi se genero una api generadora de
+                    itinerarios. Se uso AWS para hostear el proyecto
+                  </p>
+                  <p class="mt-2">
+                    Tecnologías: SQLite, Express.js, typescript, JS, AWS
+                  </p>
+                  <p class="mt-2">Duración: 2 semanas</p>
+                  <p class="mt-2">
+                    Link al código:
+                    <a
+                      href="https://github.com/AgusRodrigues/TP3_APP5.git"
+                      class="text-blue-500 underline"
+                      >https://github.com/AgusRodrigues/TP3_APP5.git</a
+                    >
+                  </p>
+                </div>
+                <div
+                  class="bg-white text-black p-4 rounded-lg shadow-lg max-w-sm mx-auto"
+                >
+                  <h3 class="text-xl font-bold">Project 2</h3>
+                  <p class="mt-2">Frontend de un E-Commerce</p>
+                  <p class="mt-2">
+                    Descripción: Este proyecto consistia en generar un frontend
+                    funcional usando una API ya hecha. Se uso Next.js para el js
+                    y tailwindcss para los estilos. Se uso Vercel para levantar
+                    el proyecto.
+                  </p>
+                  <p class="mt-2">Tecnologías: Next.js, Tailwindcss</p>
+                  <p class="mt-2">Duración: 3 semanas</p>
+                  <p class="mt-2">
+                    Link al código:
+                    <a
+                      href="https://github.com/AgusRodrigues/tp4-app6.git"
+                      class="text-blue-500 underline"
+                      >https://github.com/AgusRodrigues/tp4-app6.git</a
+                    >
+                  </p>
+                </div>
+                <div
+                  class="bg-white text-black p-4 rounded-lg shadow-lg max-w-sm mx-auto"
+                >
+                  <h3 class="text-xl font-bold">Project 3</h3>
+                  <p class="mt-2">Seguridad Web</p>
+                  <p class="mt-2">
+                    Descripción: Este proyecto se basaba en leer un codigo e
+                    identificar vulnerabilidades del OWASP top 10. Habia que
+                    identificar que vulnerabilidad era, como se podia explotar,
+                    como se podia solucionar y su riesgo.
+                  </p>
+                  <p class="mt-2">Tecnologías: OWASP</p>
+                  <p class="mt-2">Duración: 2 semanas</p>
+                  <p class="mt-2">
+                    Link al código:
+                    <a
+                      href="https://github.com/AgusRodrigues/tp7.git"
+                      class="text-blue-500 underline"
+                      >https://github.com/AgusRodrigues/tp7.git</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              id="uxdesign"
+              class="hidden mt-8 text-center text-gray-200 w-full"
+            >
+              <div class="text-4xl title-font">UX Design</div>
+              <div class="mt-4 text-sm space-y-8">
+                <div
+                  class="bg-white text-black p-4 rounded-lg shadow-lg max-w-2xl mx-auto"
+                >
+                  <h3 class="text-xl font-bold">Project 1</h3>
+                  <div
+                    class="relative w-full h-64 overflow-hidden rounded-lg mt-4"
+                  >
+                    <div
+                      class="absolute inset-0 flex items-center justify-between"
+                    >
+                      <button
+                        class="bg-gray-800 text-white p-2 rounded-full"
+                        onclick="prevImage('carousel1')"
+                      >
+                        <i class="fas fa-chevron-left"></i>
+                      </button>
+                      <button
+                        class="bg-gray-800 text-white p-2 rounded-full"
+                        onclick="nextImage('carousel1')"
+                      >
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="absolute inset-0 flex transition-transform duration-500"
+                      id="carousel1"
+                    >
+                      <img
+                        src="https://storage.googleapis.com/a1aa/image/FeUQop4hkXVXMC5YfQxY97XiftOl7PXtNJysoi1ufq3r1rfdC.jpg"
+                        alt="Image 1"
+                        class="w-full h-full object-cover"
+                      />
+                      <img
+                        src="https://storage.googleapis.com/a1aa/image/bZstuDWsZRooI9eKHsl4GHk0IHkxqs1GeXuI2gC6CYCd96vTA.jpg"
+                        alt="Image 2"
+                        class="w-full h-full object-cover"
+                      />
+                      <img
+                        src="https://storage.googleapis.com/a1aa/image/D7ZZzza9m148JBNKfcA1sBtYSEJy3cNjThPuZaLXd2Rue6vTA.jpg"
+                        alt="Image 3"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                  <p class="mt-4">Description of project 1</p>
+                </div>
+                <div
+                  class="bg-white text-black p-4 rounded-lg shadow-lg max-w-2xl mx-auto"
+                >
+                  <h3 class="text-xl font-bold">Project 2</h3>
+                  <div
+                    class="relative w-full h-64 overflow-hidden rounded-lg mt-4"
+                  >
+                    <div
+                      class="absolute inset-0 flex items-center justify-between"
+                    >
+                      <button
+                        class="bg-gray-800 text-white p-2 rounded-full"
+                        onclick="prevImage('carousel2')"
+                      >
+                        <i class="fas fa-chevron-left"></i>
+                      </button>
+                      <button
+                        class="bg-gray-800 text-white p-2 rounded-full"
+                        onclick="nextImage('carousel2')"
+                      >
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="absolute inset-0 flex transition-transform duration-500"
+                      id="carousel2"
+                    >
+                      <img
+                        src="https://storage.googleapis.com/a1aa/image/FeUQop4hkXVXMC5YfQxY97XiftOl7PXtNJysoi1ufq3r1rfdC.jpg"
+                        alt="Image 1"
+                        class="w-full h-full object-cover"
+                      />
+                      <img
+                        src="https://storage.googleapis.com/a1aa/image/bZstuDWsZRooI9eKHsl4GHk0IHkxqs1GeXuI2gC6CYCd96vTA.jpg"
+                        alt="Image 2"
+                        class="w-full h-full object-cover"
+                      />
+                      <img
+                        src="https://storage.googleapis.com/a1aa/image/D7ZZzza9m148JBNKfcA1sBtYSEJy3cNjThPuZaLXd2Rue6vTA.jpg"
+                        alt="Image 3"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                  <p class="mt-4">Description of project 2</p>
+                </div>
+                <div
+                  class="bg-white text-black p-4 rounded-lg shadow-lg max-w-2xl mx-auto"
+                >
+                  <h3 class="text-xl font-bold">Project 3</h3>
+                  <div
+                    class="relative w-full h-64 overflow-hidden rounded-lg mt-4"
+                  >
+                    <div
+                      class="absolute inset-0 flex items-center justify-between"
+                    >
+                      <button
+                        class="bg-gray-800 text-white p-2 rounded-full"
+                        onclick="prevImage('carousel3')"
+                      >
+                        <i class="fas fa-chevron-left"></i>
+                      </button>
+                      <button
+                        class="bg-gray-800 text-white p-2 rounded-full"
+                        onclick="nextImage('carousel3')"
+                      >
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="absolute inset-0 flex transition-transform duration-500"
+                      id="carousel3"
+                    >
+                      <img
+                        src="https://storage.googleapis.com/a1aa/image/FeUQop4hkXVXMC5YfQxY97XiftOl7PXtNJysoi1ufq3r1rfdC.jpg"
+                        alt="Image 1"
+                        class="w-full h-full object-cover"
+                      />
+                      <img
+                        src="https://storage.googleapis.com/a1aa/image/bZstuDWsZRooI9eKHsl4GHk0IHkxqs1GeXuI2gC6CYCd96vTA.jpg"
+                        alt="Image 2"
+                        class="w-full h-full object-cover"
+                      />
+                      <img
+                        src="https://storage.googleapis.com/a1aa/image/D7ZZzza9m148JBNKfcA1sBtYSEJy3cNjThPuZaLXd2Rue6vTA.jpg"
+                        alt="Image 3"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                  <p class="mt-4">Description of project 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
