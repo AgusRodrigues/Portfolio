@@ -1,5 +1,9 @@
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -55,6 +59,45 @@
         height: 1rem;
         background: #2563eb;
         border-radius: 50%;
+      }
+      .carousel-container {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+      }
+
+      /* Estilo para el contenedor de las imágenes */
+      .carousel-images {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 300%; /* tres veces el ancho del contenedor para tres imágenes */
+      }
+
+      /* Imagenes del carrusel */
+      .carousel-images img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Botones de navegación */
+      .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+      .carousel-button.prev {
+        left: 10px;
+      }
+      .carousel-button.next {
+        right: 10px;
       }
     </style>
     <script>
@@ -236,7 +279,7 @@
               </button>
               <button
                 onclick="toggleSection('uxdesign')"
-                class="bg-white text-black px-4 py-2  m-2"
+                class="bg-white text-black px-4 py-2 m-2"
               >
                 UX Design
               </button>
@@ -249,9 +292,7 @@
               <div
                 class="mt-4 text-sm grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
               >
-                <div
-                  class="bg-white text-black p-4 shadow-lg max-w-sm mx-auto"
-                >
+                <div class="bg-white text-black p-4 shadow-lg max-w-sm mx-auto">
                   <h3 class="text-xl font-bold">Project 1</h3>
                   <p class="mt-2">
                     Backend de Generador de Itinerarios para viajes con IA
@@ -279,9 +320,7 @@
                     >
                   </p>
                 </div>
-                <div
-                  class="bg-white text-black p-4 shadow-lg max-w-sm mx-auto"
-                >
+                <div class="bg-white text-black p-4 shadow-lg max-w-sm mx-auto">
                   <h3 class="text-xl font-bold">Project 2</h3>
                   <p class="mt-2">Frontend de un E-Commerce</p>
                   <p class="mt-2">
@@ -301,9 +340,7 @@
                     >
                   </p>
                 </div>
-                <div
-                  class="bg-white text-black p-4 shadow-lg max-w-sm mx-auto"
-                >
+                <div class="bg-white text-black p-4 shadow-lg max-w-sm mx-auto">
                   <h3 class="text-xl font-bold">Project 3</h3>
                   <p class="mt-2">Seguridad Web</p>
                   <p class="mt-2">
@@ -334,15 +371,15 @@
                 <div
                   class="bg-white text-black p-4 shadow-lg max-w-2xl mx-auto"
                 >
-                  <h3 class="text-xl font-bold">Project 1</h3>
-                  <div
-                    class="relative w-full h-64 overflow-hidden mt-4"
-                  >
+                  <h3 class="text-xl font-bold">
+                    Aplicacion Fitness gamificada
+                  </h3>
+                  <div class="relative w-full h-64 overflow-hidden mt-4">
                     <div
                       class="absolute inset-0 flex items-center justify-between"
                     >
                       <button
-                        class="bg-gray-800 text-white p-2 "
+                        class="bg-gray-800 text-white p-2"
                         onclick="prevImage('carousel1')"
                       >
                         <i class="fas fa-chevron-left"></i>
@@ -354,120 +391,235 @@
                         <i class="fas fa-chevron-right"></i>
                       </button>
                     </div>
-                    <div
-                      class="absolute inset-0 flex transition-transform duration-500"
-                      id="carousel1"
-                    >
-                      <img
-                        src="https://storage.googleapis.com/a1aa/image/FeUQop4hkXVXMC5YfQxY97XiftOl7PXtNJysoi1ufq3r1rfdC.jpg"
-                        alt="Image 1"
-                        class="w-full h-full object-cover"
-                      />
-                      <img
-                        src="https://storage.googleapis.com/a1aa/image/bZstuDWsZRooI9eKHsl4GHk0IHkxqs1GeXuI2gC6CYCd96vTA.jpg"
-                        alt="Image 2"
-                        class="w-full h-full object-cover"
-                      />
-                      <img
-                        src="https://storage.googleapis.com/a1aa/image/D7ZZzza9m148JBNKfcA1sBtYSEJy3cNjThPuZaLXd2Rue6vTA.jpg"
-                        alt="Image 3"
-                        class="w-full h-full object-cover"
-                      />
+                    <div class="carousel-container">
+                      <div class="carousel-images" id="carousel3">
+                        <img
+                          src="https://storage.googleapis.com/a1aa/image/FeUQop4hkXVXMC5YfQxY97XiftOl7PXtNJysoi1ufq3r1rfdC.jpg"
+                          alt="Image 1"
+                        />
+                        <img
+                          src="https://storage.googleapis.com/a1aa/image/bZstuDWsZRooI9eKHsl4GHk0IHkxqs1GeXuI2gC6CYCd96vTA.jpg"
+                          alt="Image 2"
+                        />
+                        <img
+                          src="https://storage.googleapis.com/a1aa/image/D7ZZzza9m148JBNKfcA1sBtYSEJy3cNjThPuZaLXd2Rue6vTA.jpg"
+                          alt="Image 3"
+                        />
+                      </div>
+                      <button
+                        class="carousel-button prev"
+                        onclick="prevSlide()"
+                      >
+                        ❮
+                      </button>
+                      <button
+                        class="carousel-button next"
+                        onclick="nextSlide()"
+                      >
+                        ❯
+                      </button>
                     </div>
                   </div>
-                  <p class="mt-4">Description of project 1</p>
+                  <p class="mt-4">
+                    Prototipo de una aplicación de fitness gamificada diseñada
+                    para motivar a los usuarios a alcanzar sus objetivos de
+                    salud y bienestar mediante un sistema de recompensas
+                    dinámico. La aplicación incluye logros y medallas
+                    coleccionables, así como un perfil personalizable. Los
+                    usuarios pueden elegir entre tres modalidades de
+                    entrenamiento adaptadas a sus metas, ya sea bajar de peso,
+                    tonificar el cuerpo o aumentar la fuerza.
+                  </p>
                 </div>
                 <div
-                  class="bg-white text-black p-4  shadow-lg max-w-2xl mx-auto"
+                  class="bg-white text-black p-4 shadow-lg max-w-2xl mx-auto"
                 >
-                  <h3 class="text-xl font-bold">Project 2</h3>
-                  <div
-                    class="relative w-full h-64 overflow-hidden mt-4"
-                  >
+                  <h3 class="text-xl font-bold">Aplicacion Museo</h3>
+                  <div class="relative w-full h-64 overflow-hidden mt-4">
                     <div
                       class="absolute inset-0 flex items-center justify-between"
                     >
                       <button
-                        class="bg-gray-800 text-white p-2 "
+                        class="bg-gray-800 text-white p-2"
                         onclick="prevImage('carousel2')"
                       >
                         <i class="fas fa-chevron-left"></i>
                       </button>
                       <button
-                        class="bg-gray-800 text-white p-2 "
+                        class="bg-gray-800 text-white p-2"
                         onclick="nextImage('carousel2')"
                       >
                         <i class="fas fa-chevron-right"></i>
                       </button>
                     </div>
-                    <div
-                      class="absolute inset-0 flex transition-transform duration-500"
-                      id="carousel2"
-                    >
-                      <img
-                        src="https://storage.googleapis.com/a1aa/image/FeUQop4hkXVXMC5YfQxY97XiftOl7PXtNJysoi1ufq3r1rfdC.jpg"
-                        alt="Image 1"
-                        class="w-full h-full object-cover"
-                      />
-                      <img
-                        src="https://storage.googleapis.com/a1aa/image/bZstuDWsZRooI9eKHsl4GHk0IHkxqs1GeXuI2gC6CYCd96vTA.jpg"
-                        alt="Image 2"
-                        class="w-full h-full object-cover"
-                      />
-                      <img
-                        src="https://storage.googleapis.com/a1aa/image/D7ZZzza9m148JBNKfcA1sBtYSEJy3cNjThPuZaLXd2Rue6vTA.jpg"
-                        alt="Image 3"
-                        class="w-full h-full object-cover"
-                      />
+                    <div class="carousel-container">
+                      <div class="carousel-images" id="carousel3">
+                        <img
+                          src="https://storage.googleapis.com/a1aa/image/FeUQop4hkXVXMC5YfQxY97XiftOl7PXtNJysoi1ufq3r1rfdC.jpg"
+                          alt="Image 1"
+                        />
+                        <img
+                          src="https://storage.googleapis.com/a1aa/image/bZstuDWsZRooI9eKHsl4GHk0IHkxqs1GeXuI2gC6CYCd96vTA.jpg"
+                          alt="Image 2"
+                        />
+                        <img
+                          src="https://storage.googleapis.com/a1aa/image/D7ZZzza9m148JBNKfcA1sBtYSEJy3cNjThPuZaLXd2Rue6vTA.jpg"
+                          alt="Image 3"
+                        />
+                      </div>
+                      <button
+                        class="carousel-button prev"
+                        onclick="prevSlide()"
+                      >
+                        ❮
+                      </button>
+                      <button
+                        class="carousel-button next"
+                        onclick="nextSlide()"
+                      >
+                        ❯
+                      </button>
                     </div>
                   </div>
-                  <p class="mt-4">Description of project 2</p>
+                  <p class="mt-4">
+                    Prototipo de una aplicación para visitas a museos, diseñada
+                    para facilitar la exploración y el aprendizaje. La
+                    aplicación incluye una guía interactiva con mapa para ubicar
+                    rápidamente las salas de interés, así como videos e imágenes
+                    de las exhibiciones para ayudar a los visitantes a descubrir
+                    y priorizar las muestras que más les atraen. Cada sala
+                    cuenta además con una vista previa que ofrece un adelanto de
+                    lo que se puede encontrar, enriqueciendo la experiencia de
+                    visita
+                  </p>
                 </div>
                 <div
-                  class="bg-white text-black p-4  shadow-lg max-w-2xl mx-auto"
+                  class="bg-white text-black p-4 shadow-lg max-w-2xl mx-auto"
                 >
-                  <h3 class="text-xl font-bold">Project 3</h3>
-                  <div
-                    class="relative w-full h-64 overflow-hidden  mt-4"
-                  >
+                  <h3 class="text-xl font-bold">Dieet</h3>
+                  <div class="relative w-full h-64 overflow-hidden mt-4">
                     <div
                       class="absolute inset-0 flex items-center justify-between"
                     >
                       <button
-                        class="bg-gray-800 text-white p-2 "
+                        class="bg-gray-800 text-white p-2"
                         onclick="prevImage('carousel3')"
                       >
                         <i class="fas fa-chevron-left"></i>
                       </button>
                       <button
-                        class="bg-gray-800 text-white p-2 "
+                        class="bg-gray-800 text-white p-2"
                         onclick="nextImage('carousel3')"
                       >
                         <i class="fas fa-chevron-right"></i>
                       </button>
                     </div>
-                    <div
-                      class="absolute inset-0 flex transition-transform duration-500"
-                      id="carousel3"
-                    >
-                      <img
-                        src="https://storage.googleapis.com/a1aa/image/FeUQop4hkXVXMC5YfQxY97XiftOl7PXtNJysoi1ufq3r1rfdC.jpg"
-                        alt="Image 1"
-                        class="w-full h-full object-cover"
-                      />
-                      <img
-                        src="https://storage.googleapis.com/a1aa/image/bZstuDWsZRooI9eKHsl4GHk0IHkxqs1GeXuI2gC6CYCd96vTA.jpg"
-                        alt="Image 2"
-                        class="w-full h-full object-cover"
-                      />
-                      <img
-                        src="https://storage.googleapis.com/a1aa/image/D7ZZzza9m148JBNKfcA1sBtYSEJy3cNjThPuZaLXd2Rue6vTA.jpg"
-                        alt="Image 3"
-                        class="w-full h-full object-cover"
-                      />
+                    <div class="carousel-container">
+                      <div class="carousel-images" id="carousel3">
+                        <img
+                          src="https://storage.googleapis.com/a1aa/image/FeUQop4hkXVXMC5YfQxY97XiftOl7PXtNJysoi1ufq3r1rfdC.jpg"
+                          alt="Image 1"
+                        />
+                        <img
+                          src="https://storage.googleapis.com/a1aa/image/bZstuDWsZRooI9eKHsl4GHk0IHkxqs1GeXuI2gC6CYCd96vTA.jpg"
+                          alt="Image 2"
+                        />
+                        <img
+                          src="https://storage.googleapis.com/a1aa/image/D7ZZzza9m148JBNKfcA1sBtYSEJy3cNjThPuZaLXd2Rue6vTA.jpg"
+                          alt="Image 3"
+                        />
+                      </div>
+                      <button
+                        class="carousel-button prev"
+                        onclick="prevSlide()"
+                      >
+                        ❮
+                      </button>
+                      <button
+                        class="carousel-button next"
+                        onclick="nextSlide()"
+                      >
+                        ❯
+                      </button>
                     </div>
                   </div>
-                  <p class="mt-4">Description of project 3</p>
+                  <p class="mt-4">
+                    Prototipo de una aplicación de nutrición diseñada para
+                    ayudar a personas con restricciones alimenticias a encontrar
+                    y adquirir alimentos que se ajusten a sus necesidades
+                    específicas. La aplicación permite explorar tiendas con
+                    productos compatibles y realizar pedidos para envío a
+                    domicilio. También incluye una sección de recetas adaptadas
+                    para quienes necesitan orientación en la cocina debido a sus
+                    restricciones. Además, la aplicación muestra las tiendas
+                    cercanas que ofrecen alimentos alineados con el perfil
+                    alimenticio personalizado del usuario, asegurando una
+                    experiencia de búsqueda eficaz y centrada en sus
+                    preferencias.
+                  </p>
+                </div>
+                <div
+                  class="bg-white text-black p-4 shadow-lg max-w-2xl mx-auto"
+                >
+                  <h3 class="text-xl font-bold">NAVI</h3>
+                  <div class="relative w-full h-64 overflow-hidden mt-4">
+                    <div
+                      class="absolute inset-0 flex items-center justify-between"
+                    >
+                      <button
+                        class="bg-gray-800 text-white p-2"
+                        onclick="prevImage('carousel3')"
+                      >
+                        <i class="fas fa-chevron-left"></i>
+                      </button>
+                      <button
+                        class="bg-gray-800 text-white p-2"
+                        onclick="nextImage('carousel3')"
+                      >
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="carousel-container">
+                      <div class="carousel-images" id="carousel3">
+                        <img
+                          src="https://storage.googleapis.com/a1aa/image/FeUQop4hkXVXMC5YfQxY97XiftOl7PXtNJysoi1ufq3r1rfdC.jpg"
+                          alt="Image 1"
+                        />
+                        <img
+                          src="https://storage.googleapis.com/a1aa/image/bZstuDWsZRooI9eKHsl4GHk0IHkxqs1GeXuI2gC6CYCd96vTA.jpg"
+                          alt="Image 2"
+                        />
+                        <img
+                          src="https://storage.googleapis.com/a1aa/image/D7ZZzza9m148JBNKfcA1sBtYSEJy3cNjThPuZaLXd2Rue6vTA.jpg"
+                          alt="Image 3"
+                        />
+                      </div>
+                      <button
+                        class="carousel-button prev"
+                        onclick="prevSlide()"
+                      >
+                        ❮
+                      </button>
+                      <button
+                        class="carousel-button next"
+                        onclick="nextSlide()"
+                      >
+                        ❯
+                      </button>
+                    </div>
+                  </div>
+                  <p class="mt-4">
+                    Prototipo de una aplicación web de tienda para juegos indie,
+                    diseñada para conectar a jugadores interesados en títulos
+                    independientes menos convencionales y a desarrolladores que
+                    buscan una alternativa de distribución fuera de plataformas
+                    como Steam o Epic Games. La tienda permite a los usuarios
+                    personalizar su perfil incluyendo las especificaciones de su
+                    computadora, asegurando que solo se muestren juegos
+                    compatibles con su sistema. Esta funcionalidad brinda una
+                    experiencia optimizada tanto para consumidores como para
+                    creadores de contenido indie.
+                  </p>
                 </div>
               </div>
             </div>
@@ -562,5 +714,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
