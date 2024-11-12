@@ -57,16 +57,16 @@
         border-radius: 50%;
       }
     </style>
-        <script>
-            function toggleSection(sectionId) {
-              // Oculta ambas secciones
-              document.getElementById("fullstack").classList.add("hidden");
-              document.getElementById("uxdesign").classList.add("hidden");
-      
-              // Muestra la sección seleccionada
-              document.getElementById(sectionId).classList.remove("hidden");
-            }
-          </script>
+    <script>
+      function toggleSection(sectionId) {
+        // Oculta ambas secciones
+        document.getElementById("fullstack").classList.add("hidden");
+        document.getElementById("uxdesign").classList.add("hidden");
+
+        // Muestra la sección seleccionada
+        document.getElementById(sectionId).classList.remove("hidden");
+      }
+    </script>
   </head>
   <body class="bg-gray-200">
     <div class="flex h-screen">
@@ -115,8 +115,7 @@
         <div
           class="flex justify-between items-center bg-orange-500 text-white p-4"
         >
-          <div>You are now entering ( Hello ) section</div>
-          <div>● 01 / 01</div>
+          <p>● 01 / 01</p>
         </div>
         <div class="flex-grow">
           <div
@@ -473,6 +472,93 @@
               </div>
             </div>
           </div>
+          <!-- Section 4 - Work Experience -->
+          <section
+            id="section-4"
+            class="min-h-screen bg-blue-600 flex flex-col items-center justify-center py-16"
+            data-section="4"
+          >
+            <div class="text-center mb-12">
+              <div class="text-9xl text-gray-200 title-font">04</div>
+              <div class="text-9xl text-gray-200 title-font">
+                Work Experience
+              </div>
+            </div>
+            <div class="text-gray-200 max-w-3xl space-y-8">
+              <!-- Job 1 - Atención al Cliente - Satoshi Market -->
+              <div class="bg-white text-black p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold">
+                  Atención al Cliente - Satoshi Market
+                </h3>
+                <p class="text-sm text-gray-500">
+                  Agosto 2020 - Febrero 2021 (Duración: 7 meses)
+                </p>
+                <ul class="mt-2 list-disc list-inside text-lg">
+                  <li>
+                    Gestión de consultas y resolución de problemas para
+                    garantizar la satisfacción del cliente.
+                  </li>
+                  <li>
+                    Desarrollo de habilidades de comunicación efectiva en
+                    atención al cliente.
+                  </li>
+                  <li>
+                    Organización y priorización de múltiples tareas en un
+                    entorno de ritmo acelerado.
+                  </li>
+                </ul>
+              </div>
+              <!-- Job 1 - Junior UX Designer -->
+              <div class="bg-white text-black p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold">
+                  Junior UX Designer - Bamboo Design and Dev
+                </h3>
+                <p class="text-sm text-gray-500">
+                  Julio 2021 - Novimebre 2021 (Duración: 4+ meses)
+                </p>
+                <ul class="mt-2 list-disc list-inside text-lg">
+                  <li>
+                    Aplicación de principios de UX/UI en proyectos de diseño web
+                    y móvil para mejorar la experiencia del usuario.
+                  </li>
+                  <li>
+                    Prototipado interactivo y creación de wireframes utilizando
+                    <strong>Figma</strong> y otras herramientas de diseño.
+                  </li>
+                  <li>
+                    Colaboración en equipos multidisciplinarios para asegurar el
+                    cumplimiento de los objetivos del proyecto.
+                  </li>
+                  <li>
+                    Investigación de usuarios y pruebas de usabilidad para
+                    optimizar diseños basados en datos reales.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Job 3 - Atención al Cliente - Burger King -->
+              <div class="bg-white text-black p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold">
+                  Atención al Cliente - Burger King
+                </h3>
+                <p class="text-sm text-gray-500">Junio 2023 - Actualidad</p>
+                <ul class="mt-2 list-disc list-inside text-lg">
+                  <li>
+                    Atención al cliente en un entorno de alta demanda,
+                    desarrollando habilidades de resolución rápida de problemas.
+                  </li>
+                  <li>
+                    Gestión de equipo y colaboración para mantener la calidad
+                    del servicio y la eficiencia operativa.
+                  </li>
+                  <li>
+                    Responsable de la administración de inventarios y manejo de
+                    efectivo, asegurando precisión en los procesos.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>
