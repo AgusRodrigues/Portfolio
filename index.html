@@ -372,49 +372,89 @@
                   class="bg-white text-black p-4 shadow-lg max-w-2xl mx-auto"
                 >
                   <h3 class="text-xl font-bold">
-                    Aplicacion Fitness gamificada
+                    Aplicacion Museo
                   </h3>
-                  <div class="relative w-full h-64 overflow-hidden mt-4">
+                  <div class="relative w-full h-900 overflow-hidden mt-4">
                     <div
                       class="absolute inset-0 flex items-center justify-between"
-                    >
-                      <button
-                        class="bg-gray-800 text-white p-2"
-                        onclick="prevImage('carousel1')"
-                      >
-                        <i class="fas fa-chevron-left"></i>
-                      </button>
-                      <button
-                        class="bg-gray-800 text-white p-2"
-                        onclick="nextImage('carousel1')"
-                      >
-                        <i class="fas fa-chevron-right"></i>
-                      </button>
-                    </div>
-                    <div class="carousel-container">
-                      <div class="carousel-images" id="carousel3">
-                        <img
-                          src="https://storage.googleapis.com/a1aa/image/FeUQop4hkXVXMC5YfQxY97XiftOl7PXtNJysoi1ufq3r1rfdC.jpg"
-                          alt="Image 1"
-                        />
-                        <img
-                          src="https://storage.googleapis.com/a1aa/image/bZstuDWsZRooI9eKHsl4GHk0IHkxqs1GeXuI2gC6CYCd96vTA.jpg"
-                          alt="Image 2"
-                        />
-                        <img
-                          src="https://storage.googleapis.com/a1aa/image/D7ZZzza9m148JBNKfcA1sBtYSEJy3cNjThPuZaLXd2Rue6vTA.jpg"
-                          alt="Image 3"
-                        />
+                    ></div>
+                    <div class="carrusel" id="carrusel1">
+                      <div class="carrusel-contenedor">
+                        <img src="assets/App Museo/Inicio.png" alt="Image 1" />
+                        <img src="assets/App Museo/Sala 1.png" alt="Image 2" />
+                        <img src="assets/App Museo/Tema 1.png" alt="Image 3" />
+                        <img src="assets/App Museo/Video.png" alt="Image 4" />
                       </div>
                       <button
-                        class="carousel-button prev"
-                        onclick="prevSlide()"
+                        class="prev"
+                        onclick="cambiarImagen(-1, 'carrusel1')"
                       >
                         ❮
                       </button>
                       <button
-                        class="carousel-button next"
-                        onclick="nextSlide()"
+                        class="next"
+                        onclick="cambiarImagen(1, 'carrusel1')"
+                      >
+                        ❯
+                      </button>
+                    </div>
+                  </div>
+                  <p class="mt-4">
+
+                    Prototipo de una aplicación para visitas a museos, diseñada
+                    para facilitar la exploración y el aprendizaje. La
+                    aplicación incluye una guía interactiva con mapa para ubicar
+                    rápidamente las salas de interés, así como videos e imágenes
+                    de las exhibiciones para ayudar a los visitantes a descubrir
+                    y priorizar las muestras que más les atraen. Cada sala
+                    cuenta además con una vista previa que ofrece un adelanto de
+                    lo que se puede encontrar, enriqueciendo la experiencia de
+                    visita
+                  </p>
+                </div>
+                <div
+                  class="bg-white text-black p-4 shadow-lg max-w-2xl mx-auto"
+                >
+                  <h3 class="text-xl font-bold">Aplicacion Fitness gamificada</h3>
+                  <div class="relative w-full h-900 overflow-hidden mt-4">
+                    <div
+                      class="absolute inset-0 flex items-center justify-between"
+                    ></div>
+                    <div class="carrusel" id="carrusel2">
+                      <div class="carrusel-contenedor">
+                        <img src="assets/FitMaster/Inicio.png" alt="Image 1" />
+                        <img
+                          src="assets/FitMaster/Objetivo.png"
+                          alt="Image 2"
+                        />
+                        <img src="assets/FitMaster/Rutinas.png" alt="Image 3" />
+                        <img
+                          src="assets/FitMaster/Ejercicios.png"
+                          alt="Image 4"
+                        />
+                        <img src="assets/FitMaster/Perfil.png" alt="Image 5" />
+                        <img
+                          src="assets/FitMaster/Misiones.png"
+                          alt="Image 6"
+                        />
+                        <img
+                          src="assets/FitMaster/Insignias.png"
+                          alt="Image 7"
+                        />
+                        <img
+                          src="assets/FitMaster/Personaje.png"
+                          alt="Image 8"
+                        />
+                      </div>
+                      <button
+                        class="prev"
+                        onclick="cambiarImagen(-1, 'carrusel2')"
+                      >
+                        ❮
+                      </button>
+                      <button
+                        class="next"
+                        onclick="cambiarImagen(1, 'carrusel2')"
                       >
                         ❯
                       </button>
@@ -434,175 +474,27 @@
                 <div
                   class="bg-white text-black p-4 shadow-lg max-w-2xl mx-auto"
                 >
-                  <h3 class="text-xl font-bold">Aplicacion Museo</h3>
-                  <div class="relative w-full h-64 overflow-hidden mt-4">
-                    <div
-                      class="absolute inset-0 flex items-center justify-between"
-                    >
-                      <button
-                        class="bg-gray-800 text-white p-2"
-                        onclick="prevImage('carousel2')"
-                      >
-                        <i class="fas fa-chevron-left"></i>
-                      </button>
-                      <button
-                        class="bg-gray-800 text-white p-2"
-                        onclick="nextImage('carousel2')"
-                      >
-                        <i class="fas fa-chevron-right"></i>
-                      </button>
-                    </div>
-                    <div class="carousel-container">
-                      <div class="carousel-images" id="carousel3">
-                        <img
-                          src="https://storage.googleapis.com/a1aa/image/FeUQop4hkXVXMC5YfQxY97XiftOl7PXtNJysoi1ufq3r1rfdC.jpg"
-                          alt="Image 1"
-                        />
-                        <img
-                          src="https://storage.googleapis.com/a1aa/image/bZstuDWsZRooI9eKHsl4GHk0IHkxqs1GeXuI2gC6CYCd96vTA.jpg"
-                          alt="Image 2"
-                        />
-                        <img
-                          src="https://storage.googleapis.com/a1aa/image/D7ZZzza9m148JBNKfcA1sBtYSEJy3cNjThPuZaLXd2Rue6vTA.jpg"
-                          alt="Image 3"
-                        />
-                      </div>
-                      <button
-                        class="carousel-button prev"
-                        onclick="prevSlide()"
-                      >
-                        ❮
-                      </button>
-                      <button
-                        class="carousel-button next"
-                        onclick="nextSlide()"
-                      >
-                        ❯
-                      </button>
-                    </div>
-                  </div>
-                  <p class="mt-4">
-                    Prototipo de una aplicación para visitas a museos, diseñada
-                    para facilitar la exploración y el aprendizaje. La
-                    aplicación incluye una guía interactiva con mapa para ubicar
-                    rápidamente las salas de interés, así como videos e imágenes
-                    de las exhibiciones para ayudar a los visitantes a descubrir
-                    y priorizar las muestras que más les atraen. Cada sala
-                    cuenta además con una vista previa que ofrece un adelanto de
-                    lo que se puede encontrar, enriqueciendo la experiencia de
-                    visita
-                  </p>
-                </div>
-                <div
-                  class="bg-white text-black p-4 shadow-lg max-w-2xl mx-auto"
-                >
-                  <h3 class="text-xl font-bold">Dieet</h3>
-                  <div class="relative w-full h-64 overflow-hidden mt-4">
-                    <div
-                      class="absolute inset-0 flex items-center justify-between"
-                    >
-                      <button
-                        class="bg-gray-800 text-white p-2"
-                        onclick="prevImage('carousel3')"
-                      >
-                        <i class="fas fa-chevron-left"></i>
-                      </button>
-                      <button
-                        class="bg-gray-800 text-white p-2"
-                        onclick="nextImage('carousel3')"
-                      >
-                        <i class="fas fa-chevron-right"></i>
-                      </button>
-                    </div>
-                    <div class="carousel-container">
-                      <div class="carousel-images" id="carousel3">
-                        <img
-                          src="https://storage.googleapis.com/a1aa/image/FeUQop4hkXVXMC5YfQxY97XiftOl7PXtNJysoi1ufq3r1rfdC.jpg"
-                          alt="Image 1"
-                        />
-                        <img
-                          src="https://storage.googleapis.com/a1aa/image/bZstuDWsZRooI9eKHsl4GHk0IHkxqs1GeXuI2gC6CYCd96vTA.jpg"
-                          alt="Image 2"
-                        />
-                        <img
-                          src="https://storage.googleapis.com/a1aa/image/D7ZZzza9m148JBNKfcA1sBtYSEJy3cNjThPuZaLXd2Rue6vTA.jpg"
-                          alt="Image 3"
-                        />
-                      </div>
-                      <button
-                        class="carousel-button prev"
-                        onclick="prevSlide()"
-                      >
-                        ❮
-                      </button>
-                      <button
-                        class="carousel-button next"
-                        onclick="nextSlide()"
-                      >
-                        ❯
-                      </button>
-                    </div>
-                  </div>
-                  <p class="mt-4">
-                    Prototipo de una aplicación de nutrición diseñada para
-                    ayudar a personas con restricciones alimenticias a encontrar
-                    y adquirir alimentos que se ajusten a sus necesidades
-                    específicas. La aplicación permite explorar tiendas con
-                    productos compatibles y realizar pedidos para envío a
-                    domicilio. También incluye una sección de recetas adaptadas
-                    para quienes necesitan orientación en la cocina debido a sus
-                    restricciones. Además, la aplicación muestra las tiendas
-                    cercanas que ofrecen alimentos alineados con el perfil
-                    alimenticio personalizado del usuario, asegurando una
-                    experiencia de búsqueda eficaz y centrada en sus
-                    preferencias.
-                  </p>
-                </div>
-                <div
-                  class="bg-white text-black p-4 shadow-lg max-w-2xl mx-auto"
-                >
                   <h3 class="text-xl font-bold">NAVI</h3>
-                  <div class="relative w-full h-64 overflow-hidden mt-4">
+                  <div class="relative w-1000 h-1000 overflow-hidden mt-4">
                     <div
                       class="absolute inset-0 flex items-center justify-between"
-                    >
-                      <button
-                        class="bg-gray-800 text-white p-2"
-                        onclick="prevImage('carousel3')"
-                      >
-                        <i class="fas fa-chevron-left"></i>
-                      </button>
-                      <button
-                        class="bg-gray-800 text-white p-2"
-                        onclick="nextImage('carousel3')"
-                      >
-                        <i class="fas fa-chevron-right"></i>
-                      </button>
-                    </div>
-                    <div class="carousel-container">
-                      <div class="carousel-images" id="carousel3">
-                        <img
-                          src="https://storage.googleapis.com/a1aa/image/FeUQop4hkXVXMC5YfQxY97XiftOl7PXtNJysoi1ufq3r1rfdC.jpg"
-                          alt="Image 1"
-                        />
-                        <img
-                          src="https://storage.googleapis.com/a1aa/image/bZstuDWsZRooI9eKHsl4GHk0IHkxqs1GeXuI2gC6CYCd96vTA.jpg"
-                          alt="Image 2"
-                        />
-                        <img
-                          src="https://storage.googleapis.com/a1aa/image/D7ZZzza9m148JBNKfcA1sBtYSEJy3cNjThPuZaLXd2Rue6vTA.jpg"
-                          alt="Image 3"
-                        />
+                    ></div>
+                    <div class="carrusel" id="carrusel3">
+                      <div class="carrusel-contenedor">
+                        <img src="assets/NAVI/Inicio.png" alt="Image 1" />
+                        <img src="assets/NAVI/Tienda.png" alt="Image 2" />
+                        <img src="assets/NAVI/Biblioteca.png" alt="Image 3" />
+                        <img src="assets/NAVI/Galeria.png" alt="Image 4" />
                       </div>
                       <button
-                        class="carousel-button prev"
-                        onclick="prevSlide()"
+                        class="prev"
+                        onclick="cambiarImagen(-1, 'carrusel3')"
                       >
                         ❮
                       </button>
                       <button
-                        class="carousel-button next"
-                        onclick="nextSlide()"
+                        class="next"
+                        onclick="cambiarImagen(1, 'carrusel3')"
                       >
                         ❯
                       </button>
@@ -619,6 +511,57 @@
                     compatibles con su sistema. Esta funcionalidad brinda una
                     experiencia optimizada tanto para consumidores como para
                     creadores de contenido indie.
+                  </p>
+                </div>
+                <div
+                  class="bg-white text-black p-4 shadow-lg max-w-2xl mx-auto"
+                >
+                  <h3 class="text-xl font-bold">Dieet</h3>
+                  <div class="relative w-full h-900 overflow-hidden mt-4">
+                    <div
+                      class="absolute inset-0 flex items-center justify-between"
+                    ></div>
+                    <div class="carrusel" id="carrusel4">
+                      <div class="carrusel-contenedor">
+                        <img src="assets/Nutricion/Inicio.png" alt="Image 1" />
+                        <img
+                          src="assets/Nutricion/Producto.png"
+                          alt="Image 2"
+                        />
+                        <img src="assets/Nutricion/Carrito.png" alt="Image 3" />
+                        <img src="assets/Nutricion/Pago.png" alt="Image 4" />
+                        <img src="assets/Nutricion/Envio.png" alt="Image 5" />
+                        <img src="assets/Nutricion/Recetas.png" alt="Image 6" />
+                        <img src="assets/Nutricion/Receta.png" alt="Image 7" />
+                      </div>
+                      <button
+                        class="prev"
+                        onclick="cambiarImagen(-1, 'carrusel4')"
+                      >
+                        ❮
+                      </button>
+                      <button
+                        class="next"
+                        onclick="cambiarImagen(1, 'carrusel4')"
+                      >
+                        ❯
+                      </button>
+                    </div>
+                  </div>
+                  <p class="mt-4">
+
+                    Prototipo de una aplicación de nutrición diseñada para
+                    ayudar a personas con restricciones alimenticias a encontrar
+                    y adquirir alimentos que se ajusten a sus necesidades
+                    específicas. La aplicación permite explorar tiendas con
+                    productos compatibles y realizar pedidos para envío a
+                    domicilio. También incluye una sección de recetas adaptadas
+                    para quienes necesitan orientación en la cocina debido a sus
+                    restricciones. Además, la aplicación muestra las tiendas
+                    cercanas que ofrecen alimentos alineados con el perfil
+                    alimenticio personalizado del usuario, asegurando una
+                    experiencia de búsqueda eficaz y centrada en sus
+                    preferencias.
                   </p>
                 </div>
               </div>

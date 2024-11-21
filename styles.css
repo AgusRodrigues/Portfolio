@@ -1,89 +1,94 @@
 @font-face {
-    font-family: "Affigere";
-    src: url("https://xcicero.esad-gv.net/page/affigere/Affigere-Regular.otf")
-      format("opentype");
-  }
-  body {
-    font-family: "Roboto", sans-serif;
-  }
-  .title-font {
-    font-family: "Affigere", sans-serif;
-  }
-  .hover-grow:hover,
-  .active {
-    height: 150px;
-  }
-  .hover-invert:hover {
-    background-color: white;
-  }
-  .hover-invert:hover .text-sm,
-  .hover-invert:hover .text-lg {
-    color: inherit;
-  }
-  .hover-invert:hover .text-sm {
-    color: var(--hover-color);
-  }
-  .hover-invert:hover .text-lg {
-    color: var(--hover-color);
-  }
-  .timeline {
-    position: relative;
-    margin: 0 auto;
-    padding: 2rem 0;
-    width: 2px;
-    background: #2563eb;
-  }
-  .timeline-item {
-    position: relative;
-    margin: 2rem 0;
-    padding-left: 2rem;
-  }
-  .timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -1rem;
-    top: 0;
-    width: 1rem;
-    height: 1rem;
-    background: #2563eb;
-    border-radius: 50%;
-  }
-  .carousel-container {
+  font-family: "Affigere";
+  src: url("https://xcicero.esad-gv.net/page/affigere/Affigere-Regular.otf")
+    format("opentype");
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.title-font {
+  font-family: "Affigere", sans-serif;
+}
+.hover-grow:hover,
+.active {
+  height: 150px;
+}
+.hover-invert:hover {
+  background-color: white;
+}
+.hover-invert:hover .text-sm,
+.hover-invert:hover .text-lg {
+  color: inherit;
+}
+.hover-invert:hover .text-sm {
+  color: var(--hover-color);
+}
+.hover-invert:hover .text-lg {
+  color: var(--hover-color);
+}
+.timeline {
   position: relative;
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 2px;
+  background: #2563eb;
+}
+.timeline-item {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  background: #2563eb;
+  border-radius: 50%;
+}
+/*carrusel*/
+
+body {
+  font-family: Arial, sans-serif;
 }
 
-/* Estilo para el contenedor de las imágenes */
-.carousel-images {
+.carrusel {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.carrusel-contenedor {
   display: flex;
   transition: transform 0.5s ease;
-  width: 300%; /* tres veces el ancho del contenedor para tres imágenes */
 }
 
-/* Imagenes del carrusel */
-.carousel-images img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.carrusel img {
+  max-width: 100%; /* Las imágenes ocuparán como máximo el 100% del ancho del contenedor */
+  max-height: 500px; /* Establece un alto máximo razonable */
+  object-fit: contain; /* Ajusta las proporciones de la imagen sin recortarla */
+  display: block;
+  margin: 0 auto; /* Centra las imágenes dentro del contenedor */
 }
 
-/* Botones de navegación */
-.carousel-button {
+.carrusel button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
   border: none;
-  padding: 10px;
   cursor: pointer;
-  font-size: 18px;
+  padding: 10px;
+  z-index: 10; /* Asegura que los botones estén por encima de las imágenes */
 }
-.carousel-button.prev {
-  left: 10px;
+
+.prev {
+  left: 10px; /* Posiciona el botón de la izquierda */
 }
-.carousel-button.next {
-  right: 10px;
+
+.next {
+  right: 10px; /* Posiciona el botón de la derecha */
 }
